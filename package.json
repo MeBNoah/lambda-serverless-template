@@ -1,0 +1,24 @@
+{
+  "name": "lambda-serverless-template",
+  "version": "1.0.0",
+  "description": "This is a template for a project that uses the Serverless Framework to implement Lambda Functions.",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "gulp": "^3.9.1",
+    "gulp-istanbul": "^1.1.2",
+    "gulp-istanbul-enforcer": "^1.0.3",
+    "gulp-mocha": "^3.0.1",
+    "gulp-standard": "^10.1.1",
+    "istanbul": "^0.4.5",
+    "lambda-tester": "^3.1.0",
+    "mocha": "^4.0.1",
+    "serverless-mocha-plugin": "^1.7.0",
+    "standard": "^10.0.3"
+  },
+  "author": "MeBNoah",
+  "license": "ISC"
+}
