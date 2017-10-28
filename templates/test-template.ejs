@@ -2,7 +2,7 @@
 const LambdaTester = require('lambda-tester')
 const expect = require('chai').expect
 
-const myHandler = require('../src/<%= functionName %>').handler
+const myHandler = require('../../src/<%= functionName %>').handler
 
 describe('handler', function () {
   it('test success', function () {

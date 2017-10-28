@@ -7,12 +7,19 @@ var standard = require('gulp-standard')
 
 gulp.task('istanbul', function (done) {
   var TEST_FILE = process.env.TEST_FILE || '*'
+  var tests = ['test/**/' + TEST_FILE + '.js']
+
+  console.log('test file ' + TEST_FILE)
+  if (TEST_FILE === '*') {
+    console.log('test file not specified in env')
+    tests = ['test/**/' + TEST_FILE + '.js', '!test/end-to-end/acceptance.js']
+  }
 
   gulp.src(['src/**/*.js'])
     .pipe(istanbul()) // Covering files
     .pipe(istanbul.hookRequire()) // Force `require` to return covered files
     .on('finish', function () {
-      gulp.src(['test/**/' + TEST_FILE + '.js'])
+      gulp.src(tests)
         .pipe(mocha())
         .pipe(istanbul.writeReports()) // Creating the reports after tests ran
         .on('end', function () {
