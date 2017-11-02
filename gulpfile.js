@@ -7,12 +7,12 @@ var standard = require('gulp-standard')
 
 gulp.task('istanbul', function (done) {
   var TEST_FILE = process.env.TEST_FILE || '*'
-  var tests = ['test/**/' + TEST_FILE + '.js']
+  var tests = ['tests/**/' + TEST_FILE + '.js']
 
   console.log('test file ' + TEST_FILE)
   if (TEST_FILE === '*') {
     console.log('test file not specified in env')
-    tests = ['test/**/' + TEST_FILE + '.js', '!test/end-to-end/acceptance.js']
+    tests = ['tests/**/' + TEST_FILE + '.js', '!tests/end-to-end/acceptance.js']
   }
 
   gulp.src(['src/**/*.js'])
@@ -29,7 +29,7 @@ gulp.task('istanbul', function (done) {
 })
 
 gulp.task('standard', function () {
-  return gulp.src(['src/**/*.js', 'test/**/*.js'])
+  return gulp.src(['src/**/*.js', 'tests/**/*.js'])
     .pipe(standard())
     .pipe(standard.reporter('default', {
       breakOnError: true,
