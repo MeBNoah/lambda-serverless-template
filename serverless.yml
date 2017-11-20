@@ -11,6 +11,7 @@ functions:
 plugins:
   - serverless-mocha-plugin
   - serverless-offline
+  - serverless-plugin-optimize
 
 custom:
   serverless-mocha-plugin:

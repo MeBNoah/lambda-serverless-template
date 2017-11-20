@@ -18,6 +18,7 @@
     "mocha": "^4.0.1",
     "serverless-mocha-plugin": "^1.7.0",
     "serverless-offline": "^3.16.0",
+    "serverless-plugin-optimize": "^3.0.4-rc.1",
     "standard": "^10.0.3",
     "supertest": "^3.0.0"
   },
